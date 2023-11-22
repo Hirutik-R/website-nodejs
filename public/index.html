@@ -1,0 +1,412 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <!--====== Title ======-->
+    <title>VoteGraud</title>
+
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--====== Favicon Icon ======-->
+    <link rel="shortcut icon" href="favicon.png" type="image/png">
+
+    <!--====== Magnific Popup CSS ======-->
+    <link rel="stylesheet" href="magnific-popup.css">
+
+    <!--====== Slick CSS ======-->
+    <link rel="stylesheet" href="slick.css">
+
+    <!--====== Font Awesome CSS ======-->
+    <link rel="stylesheet" href="font-awesome.min.css">
+
+    <!--====== Line Icons CSS ======-->
+    <link rel="stylesheet" href="LineIcons.css">
+
+    <!--====== Animate CSS ======-->
+    <link rel="stylesheet" href="animate.css">
+
+    <!--====== Bootstrap CSS ======-->
+    <link rel="stylesheet" href="bootstrap.min.css">
+
+    <!--====== Default CSS ======-->
+    <link rel="stylesheet" href="default.css">
+
+    <!--====== Style CSS ======-->
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .party-label {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .party-label input {
+            margin-right: 10px;
+        }
+      
+        .symbol-icon {
+            font-size: 20px; 
+            margin-right:50px; 
+        }
+       .navbar-brand{
+        width: 60px;
+        border-radius: 50px !important;
+       }
+
+
+
+          
+       
+
+       
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        section {
+            padding: 80px 0;
+        }
+
+        .voting-content {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            color: #3498db;
+            margin-bottom: 30px;
+        }
+
+        #partyResults p {
+            color: #333;
+            font-size: 18px;
+            margin: 15px 0;
+        }
+
+        #winningParty {
+            margin-top: 30px;
+            padding: 20px;
+            background-color: #3498db;
+            color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            font-size: 24px;
+            margin: 0;
+        }
+
+        .space{
+            margin-top: 100px;
+            margin-bottom: 100px;
+        }
+        .vote-box {
+            border: 2px solid #000;
+            padding: 10px;
+            margin: 10px 0;
+            display: inline-block;
+        }
+    </style>
+    <link rel='stylesheet' href='https://bots.kore.ai/webclient/UI/dist/kore-ai-sdk.min.css'></link>
+<script src='https://bots.kore.ai/api/platform/websdkjs/2fe6801aedb34b75941253bacea2e093e636944bcb794fe29c944fe18073e0f6st46'></script>
+<script>KoreSDK.show(KoreSDK.chatConfig);</script>
+
+</head>
+
+<body>
+
+
+    <!--====== HEADER PART START ======-->
+
+    <header class="header-area">
+        <div class="navbar-area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <nav class="navbar navbar-expand-lg">
+
+                            <button class="navbar-toggler" type="button" data-toggle="collapse"
+                                data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                                aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="toggler-icon"></span>
+                                <span class="toggler-icon"></span>
+                                <span class="toggler-icon"></span>
+                            </button>
+
+                            <div class="collapse navbar-collapse sub-menu-bar" id="navbarSupportedContent">
+                                <ul id="nav" class="navbar-nav m-auto">
+                                    <li class="nav-item active">
+                                        <a class="page-scroll" href="#home">Home</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="page-scroll" href="#service">Verification</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="page-scroll" href="#voting">Voting</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="page-scroll" href="#dashboard">Dashboard</a>
+                                    </li>
+
+                                </ul>
+                            </div> <!-- navbar collapse -->
+
+                        </nav> <!-- navbar -->
+                    </div>
+                </div> <!-- row -->
+            </div> <!-- container -->
+        </div> <!-- navbar area -->
+
+        <div id="home" class="header-hero bg_cover d-lg-flex align-items-center"
+            style="background-image: url(header-hero.jpg)">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="header-hero-content">
+                            <h1 class="hero-title wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.2s">Empowering
+                                citizens through secure digital ballots</h1>
+                            <p class="text wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.5s">Secure online
+                                voting made simple. Join VoteGaurd for a trustworthy and accessible democratic
+                                experience.</p>
+
+                        </div> <!-- header hero content -->
+                    </div>
+                </div> <!-- row -->
+            </div> <!-- container -->
+            <div class="header-hero-image d-flex align-items-center wow fadeInRightBig" data-wow-duration="1s"
+                data-wow-delay="1.1s">
+                <div class="image">
+                    <img src="hero-image.png" alt="Hero Image">
+                </div>
+            </div> <!-- header hero image -->
+
+            <div class="header-shape">
+                <img src="header-shape.png" alt="shape">
+            </div>
+        </div> <!-- header hero -->
+    </header>
+
+    <!--====== HEADER PART ENDS ======-->
+
+    <!--====== SERVICE PART START ======-->
+
+    <section id="service" class="service-area pt-90">
+        <div class="container">
+            <div class="service">
+                <div class="row no-gutters justify-content-center">
+
+                    <div class="col-lg-4 col-md-7">
+
+                    </div>
+
+                </div>
+            </div> <!-- row -->
+        </div> <!-- service -->
+        </div> <!-- container -->
+    </section>
+
+    <!--====== SERVICE PART ENDS ======-->
+
+    <!--====== ABOUT PART START ======-->
+
+
+    <!--====== VOTING PART START ======-->
+    <section id="voting" class="about-area pt-110 pb-120">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="voting-content wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.4s">
+                        <form action="/submit-vote" method="post">
+
+                            <div class="form-row">
+                                <div class="col-md-4">
+                                    <input type="text" name="voteId" placeholder="Vote ID" required="">
+                                </div>
+                                <div class="col-md-4">
+                                    <input type="text" name="name" placeholder="Name" required="">
+                                </div>
+                                <div class="col-md-4">
+                                    <input type="text" name="phoneNumber" placeholder="Phone no" required="">
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="col-md-4">
+                                    <input type="text" name="age" placeholder="Age" required="">
+                                </div>
+                                
+                                <div class="col-md-4">
+                                    <input type="text" name="place" placeholder="place" required="">
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="col-md-4">
+                                    <input type="text" name="constituency" placeholder="Constituency" required="">
+                                  </div>
+
+                                <div class="col-md-4">
+                                    <input type="text" name="district" placeholder="District" required="">  
+                                </div>
+
+                                <div class="col-md-4">
+                                    <input type="text" name="state" placeholder="State" required="">
+                                </div>
+                            </div>
+
+                                <div class="col-md-4">
+                                    VOTE
+                                </div>
+
+                                <div class="form-row mt-3">
+                                    <div class="col-md-4">
+                                        <label>Parties</label>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <label>Symbols</label>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <label>Vote</label>
+                                    </div>
+                                </div>
+    
+                                <!-- Party Rows -->
+
+                                <div class="form-row">
+                                    <div class="col-md-4">
+                                        <div class="party-label" name="party">
+                                            All India N.R. Congress
+                                        </div>
+                                        <div class="party-label" name="party">
+                                            Bharatiya Janata Party
+                                        </div>
+                                        <div class="party-label" name="party">
+                                            Dravida Munnetra Kazhagam
+                                        </div>
+                                    </div>
+    
+                                    <div class="col-md-4">
+                                        <div class="symbol-icon" role="img" aria-label="Flag">🚩</div>
+                                        <div class="symbol-icon" role="img" aria-label="Star">⭐</div>
+                                        <div class="symbol-icon" role="img" aria-label="Circle">⭕</div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="form-check">
+                                            <input type="text" name="vote" placeholder="Type NR or BJP or DMK" required="">
+                                        </div>
+                            </div>
+
+                            <button class="main-btn">Submit Vote</button>
+                        </form>
+                    </div>
+                </div>
+            </div> <!-- row -->
+        </div> <!-- container -->
+    </section>
+
+    <!--====== VOTING PART ENDS ======-->
+
+
+    <!--<section id="about" class="about-area pt-110 pb-120">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-9">
+                    <div class="about-title text-center wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.3s">
+                        <h6 class="welcome">WELCOME about</h6>
+                        <h3 class="title"><span>Know </span> More About.</h3>
+                    </div>
+                </div>
+            </div> --><!-- row -->
+    ->
+    </div> <!-- about content -->
+    </div>
+    </div> <!-- row -->
+    </div> <!-- container -->
+    </section>
+
+    <!--====== ABOUT PART ENDS ======-->
+
+
+
+
+    <section id="dashboard">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="voting-content wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.4s" style="padding-top: 100px; padding-bottom:100px;">
+                        <h1>Vote Results</h1>
+                        <div class = "space">
+
+                        </div>
+                        <div id="partyResults">
+                            <!-- Display party names and editable votes -->
+                            <p> <h2>All India N.R. Congress&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h2> <span id="partyAVotes">counting</span> votes</p>
+                            <p><h2>Bharatiya Janata Party</h2> <span id="partyBVotes">counting</span> votes</p>
+                            <p><h2>Dravida Munnetra Kazhagam</h2><span id="partyCVotes">counting</span> votes</p>
+                        </div>
+                        <div class = "space">
+
+                        </div>
+                        <div id="winningParty" class="background-color: #2368ad">
+                            <!-- Display the winning party here -->
+                            <h2>Winning Party will be announced</h2>
+                        </div>
+                    </div>
+                </div>
+            </div> <!-- row -->
+        </div> 
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+    <!--====== Jquery js ======-->
+    <script src="jquery-1.12.4.min.js"></script>
+    <script src="modernizr-3.7.1.min.js"></script>
+
+    <!--====== Bootstrap js ======-->
+    <script src="popper.min.js"></script>
+    <script src="bootstrap.min.js"></script>
+
+
+    <!--====== Counter Up js ======-->
+    <script src="waypoints.min.js"></script>
+    <script src="jquery.counterup.min.js"></script>
+
+    <!--====== WOW js ======-->
+    <script src="wow.min.js"></script>
+
+    <!--====== Scrolling Nav js ======-->
+    <script src="jquery.easing.min.js"></script>
+    <script src="scrolling-nav.js"></script>
+
+    <!--====== Scroll It js ======-->
+    <script src="scrollIt.min.js"></script>
+
+
+    <!--====== Main js ======-->
+    <script src="main.js"></script>
+
+
+    <link rel='stylesheet' href='https://bots.kore.ai/webclient/UI/dist/kore-ai-sdk.min.css'></link>
+<script src='https://bots.kore.ai/api/platform/websdkjs/2fe6801aedb34b75941253bacea2e093e636944bcb794fe29c944fe18073e0f6st46'></script>
+<script>KoreSDK.show(KoreSDK.chatConfig);</script>
+</body>
+
+</html>
